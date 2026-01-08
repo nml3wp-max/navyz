@@ -1,0 +1,26 @@
+{
+  "name": "new-way-2fa-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "axios-cookiejar-support": "^5.0.5",
+    "body-parser": "^2.2.0",
+    "cheerio": "^1.0.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.14.1",
+    "tough-cookie": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "description": ""
+}

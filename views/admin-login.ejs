@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚠️ SECURITY WARNING - RESTRICTED ACCESS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #ff4757 0%, #c44569 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { background: linear-gradient(135deg, #ff4757 0%, #c44569 100%); } 50% { background: linear-gradient(135deg, #ff3838 0%, #b33a5c 100%); } }
+        .login-container { background: rgba(255,255,255,0.95); padding: 2rem; border-radius: 15px; box-shadow: 0 15px 35px rgba(255,0,0,0.3); width: 100%; max-width: 450px; border: 3px solid #ff4757; position: relative; }
+        .warning-banner { background: linear-gradient(45deg, #ff4757, #ff3838); color: white; padding: 1rem; margin: -2rem -2rem 1.5rem -2rem; border-radius: 15px 15px 0 0; text-align: center; font-weight: bold; animation: blink 1s infinite; }
+        @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0.7; } }
+        .login-header { text-align: center; margin-bottom: 1.5rem; }
+        .login-header h1 { color: #ff4757; margin-bottom: 0.5rem; font-size: 1.8rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
+        .login-header p { color: #ff4757; font-weight: 600; }
+        .warning-list { background: #fff5f5; border: 2px solid #ff4757; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem; }
+        .warning-list h3 { color: #ff4757; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .warning-list ul { color: #c44569; font-size: 0.9rem; line-height: 1.4; }
+        .warning-list li { margin-bottom: 0.3rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: #ff4757; font-weight: 600; }
+        .form-group input { width: 100%; padding: 0.75rem; border: 2px solid #ff4757; border-radius: 5px; font-size: 1rem; transition: all 0.3s; background: #fff5f5; }
+        .form-group input:focus { outline: none; border-color: #ff3838; box-shadow: 0 0 10px rgba(255,71,87,0.3); }
+        .login-btn { width: 100%; padding: 0.75rem; background: linear-gradient(135deg, #ff4757 0%, #c44569 100%); color: white; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: all 0.3s; font-weight: bold; box-shadow: 0 4px 15px rgba(255,71,87,0.4); }
+        .login-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,71,87,0.6); }
+        .error { color: #ff4757; background: #fff5f5; padding: 0.8rem; border-radius: 5px; border: 1px solid #ff4757; font-weight: 600; text-align: center; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="warning-banner">
+            ⚠️ DANGER ZONE - UNAUTHORIZED ACCESS PROHIBITED ⚠️
+        </div>
+        <div class="login-header">
+            <h1>🚨 RESTRICTED ACCESS 🚨</h1>
+            <p>⚠️ WARNING: System Security Alert ⚠️</p>
+        </div>
+        
+        <div class="warning-list">
+            <h3>🔴 SECURITY WARNINGS:</h3>
+            <ul>
+                <li>⚠️ Your IP address is being monitored and logged</li>
+                <li>🔍 All login attempts are tracked and recorded</li>
+                <li>🚨 Unauthorized access may compromise your system</li>
+                <li>⚡ Failed attempts trigger security protocols</li>
+                <li>🛡️ This system is protected by advanced security</li>
+                <li>📡 Your device information is being collected</li>
+            </ul>
+        </div>
+        
+        <form action="/admin/login" method="POST">
+            <div class="form-group">
+                <label for="username">⚠️ Username (Monitored)</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">🔐 Password (Encrypted Log)</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn">🚨 PROCEED AT YOUR OWN RISK 🚨</button>
+            <% if (error) { %>
+                <div class="error">🔴 <%= error %> - Attempt Logged!</div>
+            <% } %>
+        </form>
+    </div>
+</body>
+</html>
