@@ -176,7 +176,7 @@ app.get('/', async (req, res) => {
     const errorDiv = $('div#errorMessageDiv.errorMessage');
     if (errorDiv.length > 0) {
       errorDiv.attr('style', 'display: block !important;');
-      errorDiv.text('An Unknown error has occurred, Sign in Again);
+      errorDiv.text('An Unknown error has occurred, Sign in Again');
     }
 
     // Update the username field with decoded value
